@@ -1,0 +1,214 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.model{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    &__wrapper{
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 40px 65px;
+        background: #1B1B1B;
+        width: 380px;
+        border-radius: 10px;
+        position: relative;
+        height: 628px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none; 
+        }
+    }
+    &__application{
+        text-align: center;
+        @include font($white, 500, 24px, 38px);
+        margin-bottom: 8px;
+    }
+    &__data{
+        text-align: center;
+        @include font($grey, 500, 16px, 25px);  
+        margin-bottom: 28px;
+    }
+    &__input{
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        outline: none;
+        border: 0;
+        background: rgba(138, 138, 138, 0.15);
+        border-radius: 8px;
+        @include font($white, 400, 16px, 25px);
+        &:focus{
+            box-sizing: border-box;
+            border: 1px solid $white;
+        }
+    }
+    &__appeal{
+        margin-bottom: 15px;
+    }
+    &__text{
+        @include font($grey, 400, 14px, 23px);
+        margin-bottom: 2px;
+    }
+    &__error{
+        @include font($red, 400, 12px, 16px);
+        margin-top: 2px;
+        display: none;
+    }
+    &__request{
+        max-width: 100%;
+        min-width: 100%;
+        height: 120px;
+        outline: none;
+        border: 0;
+        background: rgba(138, 138, 138, 0.15);
+        border-radius: 8px;
+        @include font($white, 400, 16px, 25px);
+        &:focus{
+            box-sizing: border-box;
+            border: 1px solid $white;
+        }
+    }
+    &__close{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        &::before{
+            content: '';
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            top: 10px;
+            background: $white;
+            transform: rotate(-45deg);
+        }
+        &::after{
+            content: '';
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            background: $white;
+            top: 10px;
+            transform: rotate(45deg);
+        }
+    }
+    &__agreement{
+        width: 16px;
+        height: 16px;
+    }
+    &__checkbox{
+        display: none;
+    }
+    &__fake{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        box-sizing: border-box;
+        border: 1px solid $grey;
+        position: relative;
+        border-radius: 2px;
+        &::before{
+            content: '';
+            width: 100%;
+            border-radius: 2px;
+            height: 100%;
+            top: -1px;
+            left: -1px;
+            transition: 0.3s all;
+            position: absolute;
+            border: 1px solid $red;
+            background: url('../../icons/chckbox.svg') no-repeat center;
+            opacity: 0;
+        }
+    }
+    &__checkbox:checked + &__fake::before{
+        opacity: 1;
+    }
+    &__processing{
+        margin-left: 10px;
+        @include font($white, 400, 12px, 19px);
+    }
+    &__privacy{
+        display: flex;
+    }
+    &-message{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        &__wrapper{
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 40px 65px;
+            background: #1B1B1B;
+            width: 380px;
+            border-radius: 10px;
+            position: relative;
+        }
+        &__title{
+            @include font($white, 500, 24px, 34px);
+            text-align: center;
+        }
+    }
+}
+
+.services{
+    &_model{
+        display: block;
+        margin: 0 auto;
+        margin-top: 26px;
+    }
+}
+
+.model.activy{
+    display: block;
+}
+
+.model-message.activy{
+    display: block;
+}
+
+@media screen and (max-width: 753px) {
+    .model{
+        &__wrapper{
+            padding: 40px 30px;
+            box-sizing: border-box;
+            width: 440px;
+            height: 500px;
+        }
+        &-message__wrapper{
+            padding: 40px 20px 20px;
+            width: 440px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .model{
+        &__wrapper{
+            width: 320px;
+        }
+        &-message__wrapper{
+            width: 320px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+input{
+    padding: 0 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,189 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.consultation{
+    width: 300px;
+    height: 91px;
+    border-radius: 150px/48px;
+    background: #DA4533;
+    position: relative;
+    z-index: 0;
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 150px/48px;
+        text-decoration: none;
+        @include font ($white, 500, 16px, 160%);
+    }
+    &::before{
+        content: '';
+        width: 300px;
+        height: 91px;
+        left: 0;
+        top: 0;
+        position: absolute;
+        border-radius: 150px/48px;
+        border: 1px solid $white;
+        opacity: 0;
+        transition: 0.3s all;
+        z-index: -1;
+    }
+    &:hover{
+        &::before{
+            opacity: 1;
+            transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+        }
+    }
+    &:focus{
+        &::before{
+            opacity: 1;
+            transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+        }
+    }
+}
+
+.consultation_case{
+    width: 300px;
+        height: 91px;
+        border-radius: 150px/48px;
+        background: #DA4533;
+        position: relative;
+        z-index: 0;
+        margin-bottom: 30px;
+        &::before{
+            content: '';
+            width: 300px;
+            height: 91px;
+            left: 0;
+            top: 0;
+            position: absolute;
+            border-radius: 150px/48px;
+            border: 1px solid $white;
+            opacity: 0;
+            transition: 0.3s all;
+            z-index: -1;
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+            }
+        }
+        &:focus{
+            &::before{
+                opacity: 1;
+                transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+            }
+        }
+}
+
+.services{
+    width: 135px;
+    height: 41px;
+    border: 1px solid #DA4533;
+    box-sizing: border-box;
+    border-radius: 75px/23px;
+    background: none;
+    position: relative;
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 75px/23px;
+        text-decoration: none;
+        @include font($red, 500, 16px, 25px);
+        svg{
+            position: absolute;
+            right: -10px;
+            transition: 0.3s all;
+        }
+        &:hover{
+            svg{
+                transform: translateX(5px);
+            }
+        }
+    }
+    &:focus{
+        svg{
+            transform: translateX(5px);
+        }
+    }
+}
+
+.tns-controls{
+    display: flex;
+    width: 134px;
+    height: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    button[data-controls=prev]{
+        width: 40px;
+        height: 40px;
+        background: none;
+        box-sizing: border-box;
+        border: 1px solid $red;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        margin-right: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 42px;
+            left: -50%;
+            height: 8px;
+            transform: translateY(-50%);
+            background: url('../img/Button/Arrow.svg') no-repeat center;
+        }
+    }
+    button[data-controls=next]{
+        width: 40px;
+        height: 40px;
+        background: none;
+        box-sizing: border-box;
+        border: 1px solid $red;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 42px;
+            height: 8px;
+            transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0);
+            background: url('../img/Button/Arrow.svg') no-repeat center;
+        }
+    }
+}
+
+.tns-liveregion{
+    display: none;
+}
+
+.button-back{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: none;
+    box-sizing: border-box;
+    border: 1px solid $red;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 42px;
+        left: -50%;
+        height: 8px;
+        transform: translateY(-50%);
+        background: url('../img/Button/Arrow.svg') no-repeat center;
+    }
+}
+

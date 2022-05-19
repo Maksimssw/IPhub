@@ -1,0 +1,172 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.trademark{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+    &__text{
+        width: 764px;
+    }
+    &__signs{
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    &__sign{
+        @include font($white, 400, 14px, 22px);
+        margin-right: 25px;
+        text-transform: uppercase;
+    }
+    &__title{
+        @include font($white, 400, 38px, 51px);
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font($grey, 400, 16px, 25px);
+        margin-bottom: 33px;
+    }
+    &__ph{
+        width: 251px;
+        height: 266px;
+        margin-left: 91px;
+        img{
+            width: 100%;
+            height: 100%;
+            &:last-child{
+                display: none;
+            }
+        }
+    }
+}
+
+.trademark__ph img:last-child {
+    display: block;
+  }
+
+.consultation_trademark{
+    background: $red;
+}
+
+@media screen and (max-width: 1400px) {
+    .container{
+        max-width: 960px;
+    }
+    .trademark{
+        &__ph{
+            width: 216px;
+            height: 228px;
+            margin-left: 64px;
+            img{
+                display: none;
+                &:last-child{
+                    display: block;
+                }
+            }
+        }
+        &__text{
+            width: 603px;
+        }
+        &__wrapper{
+            padding: 30px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1004px) {
+    .container{
+        max-width: 728px;
+    }
+    .trademark{
+        &__ph{
+            width: 168px;
+            height: 178px;
+            margin-left: 54px;
+        }
+        &__text{
+            width: 449px;
+        }
+        &__wrapper{
+            padding: 25px;
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 43px;
+            margin-bottom: 14px;
+        }
+        &__subtitle{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 753px) {
+    .container{
+        max-width: 440px;
+    }
+    .trademark{
+        &__ph{
+            display: none;
+        }
+        &__signs{
+            justify-content: center;
+            margin-bottom: 6px;
+        }
+        &__title{
+            font-size: 28px;
+            line-height: 37px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        &__subtitle{
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        &__sign{
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+    .points{
+        width: 200%;
+    }
+    .consultation_trademark{
+        display: block;
+        margin: 0 auto;
+    }
+    .backdrop{
+        .container{
+            overflow: hidden;
+        }
+    }
+    .button-points{
+        margin-left: 25px;
+        margin-right: 5px;
+    }
+}
+
+
+@media screen and (max-width: 455px) {
+    .container{
+        max-width: 320px;
+    }
+    .trademark{
+        &__wrapper{
+            padding: 8px;
+        }
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+}

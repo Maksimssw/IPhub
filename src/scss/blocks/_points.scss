@@ -1,0 +1,27 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.points{
+    display: flex;
+    margin-bottom: 35px;
+    align-items: center;
+    &__text{
+        @include font($grey, 400, 16px, 25px);
+        margin-right: 8px;
+        text-decoration: none;
+    }
+    &__arrow{
+        font-size: 24px;
+        color: $grey;
+        margin-right: 8px;
+    }
+    &__main{
+        @include font($red, 400, 16px, 25px);
+        text-decoration: none;
+    }
+}
+
+.button-points{
+    margin-left: 20px;
+    margin-right: 20px;
+}

@@ -1,0 +1,235 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.menu{
+    width: 873px;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background: linear-gradient(rgba(0, 0, 0, .9), #1B1B1B), url('../../img/backgroud_black.jpg') no-repeat center /cover;
+    padding: 70px 0px 177px;
+    &__wrapper{
+        margin-left: 120px;
+        width: 492px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contacts{
+        width: 250px;
+    }
+    &__contact{
+        @include font($dark_grey, 500, 18px, 28px);
+        margin-bottom: 20px;
+    }
+    &__mail{
+        @include font($white, 500, 16px, 160%);
+        margin-bottom: 15px;
+    }
+    &__telephone{
+        @include font($white, 500, 16px, 160%);
+        text-decoration: none;
+    }
+    &__social{
+        @include font($dark_grey, 500, 18px, 160%);
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    &__facebook{
+        @include font($white, 500, 16px, 160%);
+        width: 100%;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+    }
+    &__instagram{
+        @include font($white, 500, 16px, 160%);
+        width: 100%;
+        text-decoration: none;
+        margin-bottom: 50px;
+        display: block;
+    }
+    &__get{
+        @include font($dark_grey, 500, 18px, 160%);
+        margin-bottom: 20px;
+    }
+    &__scheme{
+        @include font($white, 500, 16px, 160%);
+        margin-bottom: 20px;
+    }
+    &__address{
+        @include font($grey, 400, 14px, 23px);
+        margin-bottom: 10px;
+    }
+    &__documents{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            @include font($grey, 400, 14px, 23px);
+        }
+    }
+    &__skeleton{
+        margin-top: 120px;
+        margin-left: 322px;
+        width: 445px;
+        height: 493px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.header-menu{
+    &_hamburger{
+        display: flex;
+        ul{
+            flex-direction: column;
+            height: 202px;
+            justify-content: space-between;
+        }
+    }
+    &__list_hamburger{
+        @include font($white, 500, 34px, 54px);
+        a{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+.menu_hidden{
+    display: none;
+}
+
+@media screen and (max-width: 1218px) {
+    .menu{
+        display: none;
+    }
+    .menu_active{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .container{
+        max-width: 960px;
+    }
+    .header-menu{
+        display: none;
+    }
+    .header-menu_hamburger{ 
+        display: flex;
+    }
+    .intro{
+        .container{
+                align-items: start;
+        }
+        &__spiral{
+            width: 414px;
+            height: 319px;
+        }
+        &__wrapper{
+            width: 509px;
+        }
+    }
+    .header .hamburger{
+        display: flex;
+    }
+    .hamburger.active{
+        display: flex;
+        .hamburger__item{
+            &:nth-child(2){
+                display: none;
+            }
+            &:first-child{
+                width: 100%;
+                transform: translateY(7px) rotate(45deg);
+            }
+            &:last-child{
+                width: 100%;
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+    .menu_active{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .container{
+        width: 728px;
+    }
+    .menu{
+        width: 605px;
+        &__skeleton{
+            width: 270px;
+            height: 299px;
+            margin-top: 80px;
+            margin-left: 292px;
+        }
+        &__wrapper{
+            margin-left: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 753px) {
+    .container{
+        width: 440px;
+    }
+    
+    .header{
+        &__contacts{
+            display: none;
+        }
+    }
+
+    .menu{
+        padding: 50px 0px 266px;
+        width: 372px;
+        &__wrapper{
+            width: 250px;
+            display: block;
+            margin-left: 50px;
+        }
+        &__skeleton{
+            display: none;
+        }
+    }
+
+    .header-menu_hamburger{
+        margin-bottom: 50px;
+        ul{
+            align-items: start;
+        }
+    }
+
+    .header-menu__list_hamburger{
+        font-size: 28px;
+    }
+    .header-menu_hamburger{
+        ul{
+            height: 192px;
+        }
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .container{
+        width: 320px;
+    }
+    .menu{
+        width: 322px;
+    }
+    .header-menu__list_hamburger{
+        font-size: 22px;
+    }
+    .header-menu_hamburger{
+        ul{
+            height: 150px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.header{
+    background: #1B1B1B;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 22px 0px;
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        width: 129px;
+        img{
+            width: 100%;
+        }
+    }
+    &-menu{
+        ul{
+            display: flex;
+            align-items: center;
+            width: 207px;
+            justify-content: space-between;
+            li{
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    transition: 0.3s all;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+    &__contacts{
+        a{
+            text-decoration: none;
+        }
+    }
+    &__consultation{
+        @include font($red, 500, 16px, 160%);
+    }
+    &__telephone{
+        color: $white;  
+        margin-right: 20px;
+    }
+}   
+
+.hamburger{
+    width: 46px;
+    height: 46px;
+    padding: 14px 9px;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.3s all;
+    &__item{
+        background: $white;
+        height: 2px;
+        transition: 0.3s all;
+        &:first-child{
+            width: 23px;
+        }
+        &:nth-child(2){
+            width: 100%;
+        }
+        &:last-child{
+            width: 17px;
+        }
+    }
+    &:hover{
+        .hamburger__item{
+            width: 100%;
+        }
+        background: rgba(255, 255, 255, 0.1);
+    }
+    &_menu{
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        display: flex;
+    }
+    &:focus{
+        border: 1px solid $black;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    // Start Header 
+    .container{
+        max-width: 960px;
+    }
+    .header-menu{
+        display: none;
+    }
+    .header-menu_hamburger{
+        display: flex;
+    }
+    .intro{
+        .container{
+                align-items: start;
+        }
+        &__spiral{
+            width: 414px;
+            height: 319px;
+        }
+        &__wrapper{
+            width: 509px;
+        }
+    }
+    .header .hamburger{
+        display: flex;
+    }
+    .menu_active{
+        display: block;
+    }
+}

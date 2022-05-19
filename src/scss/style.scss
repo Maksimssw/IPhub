@@ -1,0 +1,52 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+}
+
+h1, h2, h3, h4{
+    font-family: 'STIX Two Text', serif;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.bg_black{
+    padding: 33px 0px 160px;
+    background: url('../img/backgroud_black.jpg') #1B1B1B no-repeat center /cover;
+    background-blend-mode: multiply, normal;
+    position: relative;
+}
+
+.container{
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+@import 'blocks/arrow';
+@import 'blocks/button';
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/experience';
+@import 'blocks/menu';
+@import 'blocks/practice';
+@import 'blocks/resources';
+@import 'blocks/quiz';
+@import 'blocks/cases';
+@import 'blocks/team';
+@import 'blocks/application';
+@import 'blocks/footer';
+@import 'blocks/model';
+
+@import 'meadia';

@@ -1,0 +1,201 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.resources{
+    padding: 160px 0px 127px;
+    mix-blend-mode: normal;
+    background: url('../../img/backgroud_grey.jpg') #FFFFFF no-repeat center /cover;
+    &__title{
+        @include font($black, 400, 38px, 51px);
+        margin-bottom: 16px;
+        &_registration{
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+    &__link{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__subtitle{
+        @include font($grey, 500, 16px, 25px);
+        width: 707px;
+    }
+    &__slider{
+        width: 200%;
+        margin-bottom: 63px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 400px;
+    }
+    &__list{
+        width: 290px;
+        position: relative;
+        padding: 20px 25px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background: #1B1B1B;
+        border-radius: 8px;
+        height: 100%;
+        img{
+            width: 167px;
+            height: 176px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 43px;
+        }
+        &:hover{
+            .resources{
+                &__text{
+                    font-size: 14px;
+                    line-height: 23px;
+                }
+                &__models{
+                    opacity: 1;
+                    margin-bottom: 5px;
+                }
+            }
+            .arrow{
+                opacity: 1;
+            }
+            img{
+                width: 135px;
+                height: 142px;
+                margin-bottom: 30px;
+                opacity: .5;
+                transition: 0.3s all;
+            }
+        }
+    }
+    &__models{
+        opacity: 0;
+        transition: 0.3s all;
+        @include font($white, 500, 18px, 28px);
+    }
+    &__text{
+        @include font($grey, 500, 18px, 28px);
+        transition: 0.3s all;
+    }
+}
+
+.resources_registration{
+    background: none;
+}
+
+.services__bottom{
+    display: none;
+}
+
+.tns-outer{
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+    .resources{
+        padding: 120px 0px 120px;
+        &__list{
+            padding: 5px;   
+        }
+        &__shape{
+            right: 15px;
+            margin-top: 15px;
+        }
+        &__subtitle{
+            width: 633px;
+        }
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .resources{
+        padding: 80px 0px 80px;
+        &__list{
+            padding: 5px; 
+            height: 317px;
+            img{
+                width: 123px;
+                height: 131px;
+                margin-top: 36px;
+                margin-bottom: 24px;
+            }
+            &:hover{
+                img{
+                    width: 100px;
+                    height: 110px;
+                }
+            }
+        }
+        &__shape{
+            right: 15px;
+            margin-top: 15px;
+        }
+        &__subtitle{
+            width: 633px;
+        }
+        &__text{
+            line-height: 18px;
+            font-size: 14px;
+        }
+        &__link{
+            margin-bottom: 30px;
+        }
+        &__models{
+            line-height: 8px;
+        }
+        &__slider{
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 753px) {
+    
+    .resources{
+        &__title{
+            font-size: 28px;
+        }
+        &__link{
+            margin-bottom: 20px;
+        }
+    }
+
+    .services{
+        &__resources{
+            display: none;
+        }
+        &__bottom{
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 455px) {
+    .resources{
+        padding: 60px 0 60px;
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 12px;
+        }
+        .tns-controls{
+            margin-top: -25px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .services__bottom{
+        margin-top: 30px;
+    }
+}

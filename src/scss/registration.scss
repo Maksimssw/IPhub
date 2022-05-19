@@ -1,0 +1,54 @@
+
+.container{
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+::placeholder{
+    margin-left: 15px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+}
+
+h1, h2, h3, h4{
+    font-family: 'STIX Two Text', serif;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.backdrop{
+    padding: 50px 0 0;
+    background: url('../img/backgroud_black.jpg') #1B1B1B no-repeat center /cover;
+    background-blend-mode: multiply, normal;
+    position: relative;
+}
+
+@import 'blocks/signs';
+@import 'blocks/arrow';
+@import 'blocks/button';
+@import 'blocks/application';
+@import 'blocks/footer';
+@import 'blocks/resources';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/model';
+@import 'blocks/points';
+@import 'blocks/trademark';
+@import 'blocks/necessary';
+@import 'blocks/process';

@@ -1,0 +1,66 @@
+.card-signs{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+    &__points{
+        display: none;
+        padding: 5px 10px;
+        background: rgba(255,255,255,.05);
+        border-radius: 0 0 8px 8px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+        opacity: .6;    
+    }
+    &__text{
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0px 0px 8px 0px;
+        margin-right: 10px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+        opacity: 0.6;
+    }
+    &__design{
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0px 0px 8px 8px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 165%;
+        opacity: 0.6;
+    }
+}
+
+
+@media screen and (max-width: 1004px) {
+    .card-signs{
+        &__points{
+            display: block;
+        }
+        &__design{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 753px) {
+    .card-signs__text{
+        margin-right: 5px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .card-signs{
+        &__text{
+            font-size: 14px;
+        }
+    }
+}

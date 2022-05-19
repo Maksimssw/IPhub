@@ -1,0 +1,86 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.process{
+    &__title{
+        @include font($white, 400, 38px, 51px);
+        margin-bottom: 50px;
+    }
+    &__steps{
+        display: grid;
+        grid-template-columns: 354px 354px 354px;
+        gap: 58px;
+    }
+    &__point{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 15px;
+        }
+    }
+    &__heading{
+        @include font($white, 500, 18px, 28px);
+    }
+    &__text{
+        @include font($grey, 400, 16px, 25px);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .process{
+        &__title{
+            margin-bottom: 40px;
+        }
+        &__steps{
+            grid-template-columns: 307px 307px 307px;
+            gap: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1004px) {
+    .process{
+        &__title{
+            font-size: 32px;
+            line-height: 43px;
+        }
+        &__steps{
+            grid-template-columns: 229px 229px 229px;
+            gap: 20px;
+        }
+        &__point{
+            margin-bottom: 5px;
+            img{
+                margin-right: 10px;
+            }
+        }
+        &__text{
+            font-size: 14px;
+            line-height: 23px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 753px) {
+    .process{
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 35px;
+        }
+        &__steps{
+            grid-template-columns: 100%;
+            gap: 20px;
+        }
+        &__point{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 455px) {
+
+}

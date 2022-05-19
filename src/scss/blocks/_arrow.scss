@@ -1,0 +1,40 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.arrow{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    opacity: 0.5;
+    margin-left: auto;
+    transition: 0.3s all;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        background: $white;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $white;
+        width: 2px;
+        height: 18px;
+        border-radius: 2px;
+    }
+    &__stick{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $white;
+        transform: translate(1px, 7px) rotate(-45deg);
+    }
+}

@@ -1,0 +1,179 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.team{
+    padding: 160px 0;
+    background: url('../../img/backgroud_grey.jpg') #FFFFFF no-repeat center/cover;
+    mix-blend-mode: normal;
+    &__title{
+        @include font($black, 400, 38px, 51px);
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font($grey, 500, 16px, 25px);
+        margin-bottom: 50px;
+        width: 707px;
+    }
+    &__slider{
+        width: 100%;
+        display: flex;
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+    &__list{
+        width: 289px;
+    }
+    &__people{
+        margin-bottom: 10px;
+        width: 289px;
+        width: 100%;
+        img{
+            border-radius: 8px;
+            width: 100%;
+        }
+    }
+    &__name{
+        @include font($black, 500, 18px, 28px);
+        margin-bottom: 5px;
+    }
+    &__post{
+        @include font($dark_grey, 400, 14px, 19px);
+    }
+}
+
+.forum{
+    margin-top: 70px;
+    &__text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+    }
+    &__buttons{
+        width: 296px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button{
+        @include font($dark_grey, 500, 16px, 25px);
+        cursor: pointer;
+        transition: 0.3s all;
+        &:hover{
+            color: $red;
+        }
+    }
+    &__title{
+        @include font($black, 500, 24px, 38px);
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__photo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__data{
+        width: 330px;
+        margin-right: 50px;
+    }
+    &__name{
+        @include font($black, 500, 16px, 25px);
+        display: block;
+        margin-bottom: 5px;
+    }
+    &__post{
+        @include font($dark_grey, 400, 14px, 19px);
+    }
+    &__description{
+        width: 495px;
+        margin-right: 80px;
+    }
+    &__about{
+        @include font($black, 500, 18px, 28px);
+        display: block;
+        border-bottom: 1px solid #DA4533;
+        margin-bottom: 10px;
+    }
+    &__topic{
+        @include font($dark_grey, 400, 16px, 25px);
+    }
+    &__time{
+        margin-left: auto;
+        display: flex;
+        height: 176px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s all;
+        position: relative;
+        &::before{
+            width: 146px;
+            height: 146px;
+            border-radius: 50%;
+            border: 1px solid $red;
+            box-sizing: border-box;
+            position: absolute;
+            transition: 0.3s all;
+        }
+        &::after{
+            position: absolute;
+            width: 43px;
+            height: 8px;
+            background: url('../../img/Button/Arrow.svg');
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            right: -40px;
+            transition: 0.3s all;
+        }
+        &:hover{
+            &::after{
+                content: '';
+            }
+            &::before{
+                content: '';
+            }
+        }
+        &:focus{
+            outline: none;
+            &::after{
+                content: '';
+            }
+            &::before{
+                content: '';
+            }
+        }
+    }
+    &__date{
+        @include font($black, 500, 18px, 28px);
+        display: block;
+        margin-bottom: 5px;
+        width: 115px;
+        text-align: center;
+    }
+    &__number{
+        @include font($black, 400, 16px, 25px);
+    }
+    &__line{
+        width: 100%;
+        height: 1px;
+        display: block;
+        background: #8C8C8C;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__information{
+        display: flex;
+    }
+    &__place{
+        display: flex;
+        align-items: center
+    }
+}

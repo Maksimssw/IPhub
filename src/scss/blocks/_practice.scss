@@ -1,0 +1,42 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.practice{
+    margin-top: 100px;
+    &__wrapper{
+        margin-left: auto;
+        width: 804px;
+    }
+    &__title{
+        @include font($white, 400, 38px, 51px);
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font($grey, 500, 16px, 25px);
+        margin-bottom: 50px;
+    }
+    &__link{
+        display: grid;
+        grid-template-columns: 392px 392px;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__list{
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        img{
+            opacity: 0.6;
+            width: 270px;
+            transition: 0.3s all;
+        }
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}

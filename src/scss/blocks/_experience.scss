@@ -1,0 +1,55 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.experience{
+    margin-top: 150px;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__skeleton{
+        width: 396px;
+        height: 430px;
+        img{
+            width: 100%;
+        }
+    }
+    &__company{
+        width: 804px;
+    }
+    &__title{
+        @include font($white, 400, 38px, 51px);
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font($grey, 500, 16px, 25px);
+        margin-bottom: 50px;
+    }
+    &__link{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 392px  392px;
+        gap: 20px;
+        justify-content: center;
+    }
+    &__list{
+        border: solid transparent; 
+        border-width: 0.5px 0px 0px 1px; 
+        border-color: #DA4533;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        transition: 0.3s all;
+        box-sizing: border-box;
+        &:hover{
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+    &__numbers{
+        @include font($white, 500, 36px, 45px);
+        margin-bottom: 5px;
+    }
+    &__text{
+        @include font($grey, 400, 16px, 25px);
+    }
+}

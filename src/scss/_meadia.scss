@@ -1,0 +1,395 @@
+@media screen and (max-width: 1400px) {
+    .container{
+        max-width: 960px;
+    }
+    // Start Experience
+    .experience{
+        &__company{
+            width: 633px;
+        }
+        &__skeleton{
+            width: 313px
+        }
+        &__link{
+            grid-template-columns: 307px 307px;
+        }
+    }
+    // End Experience
+    // Start Practice
+    .practice{
+        &__wrapper{
+            width: 633px;
+        }
+        &__link{
+            grid-template-columns: 306px 306px;
+        }
+        &__list{
+            img{
+                width: 210px;
+                height: 77px;
+            }
+        }
+    }
+    // End Practice
+    // Start Team
+    .team{
+        padding: 120px 0;
+    }
+    .forum{
+        margin-top: 40px;
+        &__data{
+            width: 192px;
+            margin-right: 35px;
+        }
+        &__description{
+            width: 416px;
+            margin-right: 52px;
+        }
+    }
+    // End Team
+}
+
+@media screen and (max-width: 1004px) {
+    .container{
+        width: 728px;
+    }
+    // Start Experience
+    .experience{
+        margin-top: 120px;
+        &__company{
+            width: 728px;
+        }
+        &__skeleton{
+           display: none;   
+        }
+        &__link{
+            grid-template-columns: 354px 354px;
+        }
+        &__title{
+            font-size: 32px;
+        }
+    }
+    // End Experience
+    // Start Practice
+    .practice{
+        &__wrapper{
+            width: 738px;
+            margin: 0 auto;
+        }
+        &__link{
+            grid-template-columns: 354px 354px;
+        }
+        &__list{
+            img{
+                width: 243px;
+                height: 89px;
+            }
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 43px;
+        }
+    }
+    // End Practice
+    // Start Team
+     .team{
+         padding: 80px 0;
+        &__title{
+            font-size: 32px;
+            margin-bottom: 14px;
+            line-height: 43px;
+        }
+        &__name{
+            font-size: 16px;
+        }
+    }
+    .forum{
+        &__information{
+            display: block;
+            margin-right: 26px;
+        }
+        &__description{
+            width: 339px;
+            margin-right: 36px;
+        }
+        &__data{
+            margin-top: 15px;
+            margin-right: 0;
+        }
+    }
+    // End Team
+}
+
+@media screen and (max-width: 753px) {
+    .container{
+        width: 440px;
+    }
+    // Start Intro 
+    .intro{
+        &__spiral{
+            display: none;
+        }
+        &__wrapper{
+            width: 100%;
+        }
+        &__title span:first-child{
+            position:static;
+        }
+        &__title{
+            font-size: 44px;
+            text-align: center;
+            line-height: 59px;
+        }
+        &__partner{
+            text-align: center;
+        }
+        &__subtitle{
+            text-align: center;
+        }
+        &__buttons{
+            display: block;
+        }
+    }
+    .consultation_intro{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 31px;
+    }
+    .services_intro{
+        display: block;
+        margin: 0 auto; 
+    }
+    // End Intro
+    // Start Experience
+    .experience{
+        margin-top: 80px;
+        &__company{
+            width: 440px;
+        }
+        &__skeleton{
+           display: none;   
+        }
+        &__link{
+            grid-template-columns: 210px 210px;
+        }
+        &__title{
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+        &__subtitle{
+            margin-bottom: 40px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+        &__numbers{
+            font-size: 28px;
+        }
+        &__list{
+            padding: 15px;
+        }
+    }
+    // End Experience
+    // Start Practice
+    .practice{
+        &__wrapper{
+            width: 440px;
+        }
+        &__link{
+            grid-template-columns: 440px;
+        }
+        &__title{
+            font-size: 28px;
+            line-height: 37px;
+        }
+    }
+    // End Practice
+
+    .services{
+        &_cases{
+            display: none;
+        }
+        &_down{
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    }
+    // Start Team
+    .team{
+        &__title{
+            font-size: 28px;
+            line-height: 37px;
+        }
+        &__name{
+            font-size: 16px;
+        }
+        &__subtitle{
+            width: 440px;
+        }
+        &__slider{
+            margin-bottom: 20px;
+        }
+    }
+
+    .forum{
+        &__wrapper{
+            display: block;
+        }
+        &__information{
+            display: flex;
+            margin-bottom: 15px;
+            margin-right: 0;
+            width: 100%;
+            align-items: center;
+        }
+        &__buttons{
+            width: 211px;
+        }
+        &__data{
+            width: 325px;
+            margin-top: 0;
+        }
+        &__time{
+            height: 133px;
+            &::before{
+                width: 133px;
+                height: 133px;
+            }
+            &::after{
+                right: -30px;
+            }
+        }
+        &__description{
+            width: 271px;
+            margin-right: 20px;
+        }
+    }
+    // End Team
+}   
+
+@media screen and (max-width: 455px) {
+    .container{
+        width: 320px;
+    }
+    // Start Intro
+    .intro{
+        &__title{
+            font-size: 34px;
+            line-height: 45px;
+            margin-bottom: 10px;
+        }
+        &__partner{
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        &__subtitle{
+            font-size: 14px;
+        }
+    }
+    // End Intro
+    // Start Experience
+    .experience{
+        margin-top: 60px;
+        &__company{
+            width: 320px;
+        }
+        &__skeleton{
+           display: none;   
+        }
+        &__link{
+            grid-template-columns: 320px;
+        }
+        &__title{
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &__subtitle{
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+        &__numbers{
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        &__list{
+            display: flex;
+            align-items: center
+        }
+    }
+    // End Experience  
+    // Start Practice
+    .practice{
+        &__wrapper{
+            width: 320px;
+        }
+        &__link{
+            grid-template-columns: 320px;
+        }
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    // End Practice 
+    // Start Resources
+    .services__bottom{
+        margin-top: 30px;
+    }
+    
+    // End Resources
+    .services{
+        &_down{
+            margin-top: 35px;
+        }
+    }
+    // Start Team
+    .team{
+        padding: 60px 0;
+        &__title{
+            font-size: 24px;
+            margin-bottom: 12px;
+            line-height: 32px;
+        }
+        &__name{
+            font-size: 16px;
+        }
+        &__subtitle{
+            width: 320px;
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 35px;
+        }
+        &__slider{
+            margin-bottom: 25px;
+        }
+    }
+
+    .forum{
+        &__text{
+            display: block;
+        }
+        &__data{
+            width: 225px;
+        }
+        &__description{
+            width: 320px;
+        }
+        &__place{
+            display: block;
+        }
+        &__time{
+            width: 133px;
+            height: 133px;
+            margin-left: 0;     
+        }
+    }
+    // End Team
+}

@@ -1,0 +1,224 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+
+.about{
+    padding: 50px 0 0 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img{
+        width: 365px;
+        height: 461px;
+        img{
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: luminosity;
+        }
+    }
+}
+
+.company{
+    overflow: hidden;
+    width: 701px;
+    &__title{
+        @include font($white, 500, 24px, 38px);
+        padding-bottom: 4px;
+        display: inline-block;
+        border-bottom: 1px solid #DA4533;
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        @include font($grey, 400, 16px, 25px);
+    }
+    &__ciricle{
+        margin-top: 16px;
+        width: 100%;
+        height: 485px;
+        margin-bottom: 50px;
+        mix-blend-mode: luminosity;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    ol{
+        margin-left: 18px;
+    }
+    &__item{
+        height: 340px;
+        img{
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: luminosity;
+        }
+    }
+    &__slider{
+        margin-top: 16px;
+        display: flex;
+        gap: 20px;
+    }
+    &__descision{
+        margin-bottom: 50px;
+    }
+    &__list{
+        height: 471px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__patent{
+        display: flex;
+        gap: 20px;
+        margin-top: 16px;
+    }
+    &__grass{
+        display: none;
+        mix-blend-mode: luminosity;
+        justify-content: center;
+        width: 354px;
+        height: 446px;
+        margin-bottom: 40px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        margin: 0 auto;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+}
+
+.tns-controls{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.cases{
+    &_company{
+        padding: 0;
+        background: none;
+        .tns-inner{
+            overflow: hidden;
+        }
+    }
+    &__title{
+        &_company{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .company{
+        width: 633px;
+        &__item{
+            height: 306px;
+        }
+        &__list{
+            height: 425px;
+        }
+    }
+    .about__img{
+        width: 270px;
+        height: 340px;
+    }
+    .brand_bg{
+        padding-bottom: 120px;
+    }
+}
+
+
+@media screen and (max-width: 1004px) {
+    .brand_bg{
+        padding-bottom: 80px;
+    }
+    .about{
+        padding-top: 50px;
+    }
+    .about__img{
+        display: none;
+    }
+    .company{
+        width: 100%;   
+        &__grass{
+            display: flex;
+        } 
+        &__ciricle{
+            margin-bottom: 40px;
+        }
+        &__descision{
+            margin-bottom: 40px;
+        }
+        &__list{
+            height: 290px;
+        }
+    }
+}
+
+@media screen and (max-width: 753px) {
+    .company{
+        &__ciricle{
+            height: 299px;
+        }
+        &__title{
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 14px;
+        }
+        &__item{
+            height: 210px;
+        }
+        &__grass{
+            width: 209px;
+            height: 264px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 455px) {
+    .company{
+        &__ciricle{
+            height: 218px;
+            margin-bottom: 35px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 23px;
+        }
+        &__item{
+            height: 320px;
+        }
+        &__grass{
+            width: 100%;
+            height: 404px;
+            margin: 25px 0 35px;
+        }
+        &__list{
+            height: 445px;
+        }
+    }
+    .points{
+        &__text{
+            font-size: 12px;
+        }
+        &__main{
+            font-size: 12px;
+        }
+    }
+    .button{
+        &-points{
+            margin-left: 20px;
+        }
+    }
+    .tns-controls{
+        margin-top: 25px;
+    }
+}

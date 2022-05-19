@@ -1,0 +1,25 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.card-signs{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+    &__text{
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0px 0px 8px 0px;
+        margin-right: 10px;
+        @include font($white, 400, 14px, 165%);
+        opacity: 0.6;
+    }   
+    &__design{
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0px 0px 8px 8px;
+        @include font($white, 400, 14px, 165%);
+        opacity: 0.6;
+    }
+}

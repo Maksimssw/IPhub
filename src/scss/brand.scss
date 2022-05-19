@@ -1,0 +1,56 @@
+
+.container{
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+::placeholder{
+    margin-left: 15px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+}
+
+h1, h2, h3, h4{
+    font-family: 'STIX Two Text', serif;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.brand_bg{
+    padding: 56px 0 160px;
+    background: url('../img/backgroud_black.jpg') #1B1B1B no-repeat center /cover;
+    background-blend-mode: multiply, normal;
+    position: relative;
+    .container_hidden{
+        overflow: hidden
+    }
+}
+
+
+@import 'blocks/cases';
+@import 'blocks/trademark';
+@import 'blocks/signs';
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/button';
+@import 'blocks/footer';
+@import 'blocks/model';
+@import 'blocks/application';
+@import 'blocks/points';
+@import 'blocks/company';
